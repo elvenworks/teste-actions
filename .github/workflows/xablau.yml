@@ -13,7 +13,8 @@ jobs:
 
     - name: Build docker
       run: |
-        docker build -t test .
+        docker pull hello-world
+        docker build .
   build-2:
     name: Build Docker
     runs-on: my-custom-runner
@@ -23,7 +24,8 @@ jobs:
 
     - name: Build docker
       run: |
-        docker build -t test .
+        docker pull hello-world
+        docker build .
   build-3:
     name: Build Docker
     runs-on: my-custom-runner
@@ -33,7 +35,8 @@ jobs:
 
     - name: Build docker
       run: |
-        docker build -t test .
+        docker pull hello-world
+        docker build .
   build-4:
     name: Build Docker
     runs-on: my-custom-runner
@@ -43,7 +46,8 @@ jobs:
 
     - name: Build docker
       run: |
-        docker build -t test .
+        docker pull hello-world
+        docker build .
   build-5:
     name: Build Docker
     runs-on: my-custom-runner
@@ -53,4 +57,5 @@ jobs:
 
     - name: Build docker
       run: |
-        docker build -t test .
+        docker pull hello-world
+        docker build .
