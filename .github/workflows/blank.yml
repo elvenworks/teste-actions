@@ -34,13 +34,12 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-  build2:
-    name: Build
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    - name: send custom message with args
-      uses: appleboy/discord-action@master
-      with:
-        webhook_id: 1095705266177192006
-        webhook_token: 14cmAWnucoAjmgtLX6lEbQ0_vzKtm7ru7k8OS09f0fSZVWo4t7DBSFhALTFOLKKGEteU
+
+      - name: Notify discord
+        uses: th0th/notify-discord@v0.4.1
+        if: ${{ always() }}
+        env:
+          DISCORD_WEBHOOK_URL: https://discord.com/api/webhooks/1095705266177192006/14cmAWnucoAjmgtLX6lEbQ0_vzKtm7ru7k8OS09f0fSZVWo4t7DBSFhALTFOLKKGEteU
+          GITHUB_ACTOR: ${{ github.actor }}
+          GITHUB_JOB_NAME: "Build and deploy"
+          GITHUB_JOB_STATUS: ${{ job.status }}
