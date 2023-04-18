@@ -46,8 +46,8 @@ jobs:
       with:
         valueFile: 'teste-argo/values.yaml'
         propertyPath: 'image.tag'
-        value: teste
+        value: staging-${{ steps.time.outputs.time }}-${{ github.sha }}
         branch: main
         commitChange: true
         updateFile: true
-        message: 'teste' 
+        message: 'Update Image Tag Version to staging-${{ steps.time.outputs.time }}-${{ github.sha }}' 
