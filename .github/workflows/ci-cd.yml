@@ -41,3 +41,13 @@ jobs:
         docker build -f ./build-ci/package/Dockerfile -t $ECR_REGISTRY/$REPO_NAME:$IMAGE_TAG .
         docker push $ECR_REGISTRY/$REPO_NAME:$IMAGE_TAG
 
+    - name: Update Image Version in the related HelmChart values.yaml
+      uses: fjogeleit/yaml-update-action@main
+      with:
+        valueFile: 'teste-argo/values.yaml'
+        propertyPath: 'image.tag'
+        value: staging-${{ steps.time.outputs.time }}-${{ github.sha }}
+        branch: main/staging-${{ steps.time.outputs.time }}-${{ github.sha }}
+        targetBranch: main
+        createPR: true
+        message: 'Update Image Version to staging-${{ steps.time.outputs.time }}-${{ github.sha }}' 
