@@ -46,7 +46,7 @@ jobs:
       with:
         valueFile: 'teste-argo/values.yaml'
         propertyPath: 'image.tag'
-        value: staging-${{ steps.time.outputs.time }}-${{ github.sha }}
+        value: staging2-${{ steps.time.outputs.time }}-${{ github.sha }}
         branch: main
         commitChange: true
         updateFile: true
