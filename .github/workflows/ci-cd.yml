@@ -49,5 +49,5 @@ jobs:
         value: staging-${{ steps.time.outputs.time }}-${{ github.sha }}
         branch: main
         commitChange: true
-        updateFile: true
+        method: CreateOrUpdate
         message: 'Update Image Tag Version to staging-${{ steps.time.outputs.time }}-${{ github.sha }}' 
