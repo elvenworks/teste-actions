@@ -1,6 +1,6 @@
 on:
   push:
-    branches: [ staging1 ]
+    branches: [ staging ]
 
 name: AWS ECR push
 
