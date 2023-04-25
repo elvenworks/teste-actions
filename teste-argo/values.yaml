@@ -11,7 +11,7 @@ rollingUpdate:
   maxUnavailable: 0
 image:
   repository: 740561009084.dkr.ecr.us-east-1.amazonaws.com/your-ms-name
-  tag: staging-2023-04-19-23-51-30-c506ddcce85ae586c47450f28cbb17a74700e2e2
+  tag: development-2023-04-25-22-17-17-f56b8f4a1cee8f387d7f48f8a90cb07635728a76
   pullPolicy: IfNotPresent
 nameOverride: ''
 fullnameOverride: ''
