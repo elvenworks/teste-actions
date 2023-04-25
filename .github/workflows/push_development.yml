@@ -1,5 +1,5 @@
 name: Pull Request CI
-run-name: Running CI/CD Development ElvenWorks 🚀🚀
+run-name: Running CI/CD Development ElvenWorks 🚀
 on:
   push:
     branches:
