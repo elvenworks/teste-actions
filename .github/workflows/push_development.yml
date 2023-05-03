@@ -3,7 +3,8 @@ run-name: Running CI/CD Development ElvenWorks 🚀🚀
 on:
   push:
     branches:
-      - main
+      - development
+      - new-cd
 jobs:
   build:
     runs-on: self-hosted
@@ -17,5 +18,6 @@ jobs:
     secrets:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      REPO_NAME: ${{ secrets.REPO_NAME }}
-      FILE_PATH: ${{ secrets.FILE_PATH }}
+      REPO_NAME: ${{ secrets.REPO_NAME }} # indexer
+      FILE_PATH_DEV: ${{ secrets.FILE_PATH_DEV }} # 'teste-argo/values.yaml'
+      FILE_PATH_ORIGIN: ${{ secrets.FILE_PATH_ORIGIN }} # ./build-ci/package/Dockerfile
