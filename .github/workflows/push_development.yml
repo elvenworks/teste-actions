@@ -3,6 +3,7 @@ run-name: Running CI/CD Development ElvenWorks 🚀🚀
 on:
   push:
     branches:
+      - main
       - development
       - new-cd
 jobs:
