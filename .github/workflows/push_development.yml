@@ -19,6 +19,6 @@ jobs:
     secrets:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      REPO_NAME: ${{ secrets.REPO_NAME }} # indexer
+      REPO_NAME: ${{ secrets.REPO_NAME }} # teste-actions
       FILE_PATH_DEV: ${{ secrets.FILE_PATH_DEV }} # 'teste-argo/values.yaml'
       FILE_PATH_ORIGIN: ${{ secrets.FILE_PATH_ORIGIN }} # ./build-ci/package/Dockerfile
